@@ -3,9 +3,11 @@ html
   head
     title Insects Panic
     = csrf_meta_tags
-
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
+    = stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Autour+One'
+    = stylesheet_link_tag 'application', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 body
+  = render 'layouts/header'
   = yield
