@@ -1,5 +1,5 @@
-li id="insect-#{insect.id}"
-  p = insect.name
-  = image_tag insect.picture.url
+.col-md-3.insect-box.text-center id="insect-#{insect.id}"
+  p.insect-name = insect.name
+  = image_tag insect.picture.url, class: "insect-img animated infinite"
 
-= debug(insect.picture)
+  = link_to "kill", insect, class: "btn btn-default", method: :delete, data: { confirm: "really?" }

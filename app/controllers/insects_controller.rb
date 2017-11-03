@@ -18,6 +18,13 @@ class InsectsController < ApplicationController
   end
 
   def destroy
+    @insect = Insect.find(params[:id])
+    if @insect.destroy
+      flash[:success] = "killed"
+    else
+      flash[:danger] = "survived"
+    end
+    redirect_to insects_path
   end
 
   private
