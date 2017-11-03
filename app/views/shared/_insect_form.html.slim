@@ -1,0 +1,12 @@
+= form_for insect do |f|
+  = render 'shared/error_messages', object: f.object
+
+  .form-group
+    = f.label :name
+    = f.text_area :name, class: "form-control"
+
+  /.btn.btn-default.btn-file
+    | file
+  = f.file_field :picture, accept: 'image/png'
+
+  = f.submit "add", class: "btn"

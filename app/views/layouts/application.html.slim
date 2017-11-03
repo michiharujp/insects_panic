@@ -9,6 +9,8 @@ html
     = stylesheet_link_tag 'application', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 body
+  - flash.each do |message_type, message|
+    .alert class="alert-#{message_type}" = message
   = render 'layouts/header'
   = yield
   = debug(params) if Rails.env.development?
