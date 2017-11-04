@@ -5,10 +5,12 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find_by(name: params[:session][:name])
-    if user. && user.authenticate(params[:session][:password])
+    if user && user.authenticate(params[:session][:password])
       flash[:success] = "Hello #{user.name}"
+      log_in user
+      redirect_to user
     else
-      flash[:danger]  = "Who are you?"
+      flash.now[:danger]  = "Who are you?"
       render :new
     end
   end

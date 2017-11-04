@@ -1,3 +1,9 @@
+User.create!(name: "tekeke",
+             password: "tekeke",
+             password_confirmation: "tekeke",
+             sex: :male
+)
+
 10.times do |index|
   name = Faker::Name.unique.name
   password = "password"
