@@ -18,6 +18,7 @@
       .form-group
         = f.label :sex
         #sex-boxes
+
           = f.label :sex, :male, value: :male, class: "sex-box" do
             = f.radio_button :sex, :male, class: "hidden sex-btn"
             = image_tag 'male.png', class: "sex-image"
@@ -34,4 +35,3 @@
             p other
 
       = f.submit "Becoming a kid", class: "btn btn-default center-block"
-

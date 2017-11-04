@@ -1,7 +1,9 @@
 require 'test_helper'
 
 class InsectsControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+
+  test "should get index" do
+    get insects_path
+    assert_response :success
+  end
 end
