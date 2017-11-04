@@ -3,7 +3,7 @@ require 'test_helper'
 class UserTest < ActiveSupport::TestCase
 
   def setup
-    @user = User.new(name: "Michiharu", password: "foobar", password_confirmation: "foobar")
+    @user = User.new(name: "Michiharu", password: "foobar", password_confirmation: "foobar", sex: :male)
   end
 
   test "sample should be valid" do
@@ -33,6 +33,11 @@ class UserTest < ActiveSupport::TestCase
 
   test "password should not be too short" do
     @user.password = @user.password_confirmation = 'a' * 3
+    assert_not @user.valid?
+  end
+
+  test "sex should be exist" do
+    @user.sex = nil
     assert_not @user.valid?
   end
 
