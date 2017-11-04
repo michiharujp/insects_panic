@@ -15,5 +15,23 @@
         = f.label :password_confirmation
         = f.password_field :password_confirmation, class: "form-control"
 
+      .form-group
+        = f.label :sex
+        #sex-boxes
+          = f.label :sex, :male, value: :male, class: "sex-box" do
+            = f.radio_button :sex, :male, class: "hidden sex-btn"
+            = image_tag 'male.png', class: "sex-image"
+            p male
+
+          = f.label :sex, :female, value: :female, class: "sex-box" do
+            = f.radio_button :sex, :female, class: "hidden sex-btn"
+            = image_tag 'female.png', class: "sex-image"
+            p female
+
+          = f.label :sex, :other, value: :other, class: "sex-box" do
+            = f.radio_button :sex, :other, class: "hidden sex-btn", checked: true
+            = image_tag 'other.png', class: "sex-image animated infinite swing"
+            p other
+
       = f.submit "Becoming a kid", class: "btn btn-default center-block"
 
