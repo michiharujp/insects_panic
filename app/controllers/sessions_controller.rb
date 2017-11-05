@@ -10,11 +10,13 @@ class SessionsController < ApplicationController
       log_in user
       redirect_to user
     else
-      flash.now[:danger]  = "Who are you?"
+      flash.now[:danger]  = "invalid"
       render :new
     end
   end
 
   def destroy
+    log_out
+    redirect_to root_url
   end
 end

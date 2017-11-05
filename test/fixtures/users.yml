@@ -1,2 +1,4 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
+tekeke:
+  name: tekeke
+  password_digest: <%= User.digest('password') %>
+  sex: 1
