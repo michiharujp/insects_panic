@@ -7,7 +7,7 @@
 
 *.DS_Store
 
-/public/uploads/*
+/public/*
 
 # Ignore bundler config.
 /.bundle
