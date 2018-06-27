@@ -1,0 +1,6 @@
+h1.main-title.text-center.animated Insects Panic
+p.text-center Let's enjoy this like a kid
+
+- if logged_in?
+- else
+  = render 'shared/user_form', user: @user

@@ -1,0 +1,4 @@
+tekeke:
+  name: tekeke
+  password_digest: <%= User.digest('password') %>
+  sex: 1

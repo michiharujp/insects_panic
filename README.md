@@ -1,3 +1,3 @@
 # Insects Panic!!
 
-## さあ、童心に戻ろう
+## Let's play like a kid!!

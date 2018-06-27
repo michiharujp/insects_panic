@@ -1,0 +1,7 @@
+= render 'shared/insect_form', insect: @insect
+
+#insects.row
+  - if @insects.any?
+    = render @insects
+  - else
+    h3 Insects became extinct
